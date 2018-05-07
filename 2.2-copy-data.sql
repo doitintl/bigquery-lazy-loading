@@ -1,3 +1,4 @@
+#standardSQL
 INSERT INTO `doit-playground.wikipedia_v2.pageviews_2016` (datehour, wiki, title, views)
 WITH hours_already_loaded as (
   SELECT DISTINCT datehour FROM `doit-playground.wikipedia_v2.pageviews_2016`

@@ -1,5 +1,5 @@
 #standardSQL
-CREATE VIEW `doit-playground.views.wikipedia_views_test_ddl`
+CREATE VIEW `doit-playground.views.wikipedia_views_gcs_parsed`
 AS SELECT
   PARSE_TIMESTAMP('%Y%m%d-%H%M%S', REGEXP_EXTRACT(_FILE_NAME, '[0-9]+-[0-9]+')) datehour
   , REGEXP_EXTRACT(line, '([^ ]*) ') wiki
