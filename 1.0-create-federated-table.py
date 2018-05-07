@@ -2,6 +2,7 @@
 from google.cloud import bigquery
 bq_client = bigquery.Client(project='doit-playground')
 table_ref = bq_client.dataset('views').table('wikipedia_views_gcs')
+SCHEMA = [bigquery.SchemaField('line', 'STRING')]
 table = bigquery.Table(table_ref, schema=SCHEMA)
 extconfig = bigquery.ExternalConfig('CSV')
 extconfig.schema = [bigquery.SchemaField('line', 'STRING')]
